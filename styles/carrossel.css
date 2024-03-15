@@ -82,6 +82,7 @@ padding: 1em;
 
 .descricao__imagem{
     margin: 0.2em;
+    transform: scale(0.5);
 }
 
 @media screen and (min-width: 1024px){

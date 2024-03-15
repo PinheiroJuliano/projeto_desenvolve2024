@@ -22,6 +22,7 @@
 
 .container__imagem {
     padding: 1em;
+    transform: scale(1);
 }
 
 .lista-menu {
@@ -144,6 +145,10 @@
 }
 
 @media screen and (min-width: 1728px){
+    .container{
+        margin-right: 12em;
+    }
+
     .container__link{
         display: flex;
         align-items: center;
