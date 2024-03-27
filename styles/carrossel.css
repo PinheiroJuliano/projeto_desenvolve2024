@@ -35,6 +35,7 @@
 
 .botoes{
     display: flex;
+    align-items: center;
 }
 
 .card {
@@ -81,8 +82,8 @@ padding: 1em;
 }
 
 .descricao__imagem{
-    margin: 0.2em;
-    transform: scale(0.5);
+    height: 12.2em;
+    margin: 0.1em;
 }
 
 @media screen and (min-width: 1024px){
