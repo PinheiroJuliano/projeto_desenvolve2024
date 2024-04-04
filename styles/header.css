@@ -122,7 +122,7 @@
     }
 
     .opcoes__botao:checked~.opcoes__rotulo>.opcoes__item{
-        background: var(--terciaria);
+        background: var(--principal);
         color: var(--terciaria);
     }
 
