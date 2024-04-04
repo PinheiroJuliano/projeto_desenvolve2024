@@ -70,11 +70,19 @@ padding: 1em;
 
 .botoes__ancora{
     background-color: var(--corextra);
-    padding: 1em 2.2em;
+    padding: 1em 1em 0 1em;
     color: var(--branco);
     font-weight: 700;
-    text-decoration: none;
     margin: 0.1em;
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 1em;
+    border-radius: 10px;
+}
+
+.botoes__preco__anterior{
+    padding: 1em 0;    
 }
 
 .classificacao{
@@ -84,7 +92,9 @@ padding: 1em;
 .descricao__imagem{
     height: 12.2em;
     margin: 0.1em;
+    border-radius: 10px;
 }
+
 
 @media screen and (min-width: 1024px){
    

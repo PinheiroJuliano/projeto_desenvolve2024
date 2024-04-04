@@ -28,12 +28,15 @@
 .lista-menu {
     display: none;
     position: absolute;
-    top: 100%;
-    width: 60vw;
+    top: calc(100% + 0px);
+    width: 50vw;
+    max-height: 300px; 
+    overflow-y: auto;
 }
 
-.container__botao:checked~.lista-menu {
+.container__botao:checked ~ .lista-menu {
     display: block;
+    z-index: 999;
 }
 
 .lista-menu__titulo,
@@ -131,7 +134,7 @@
     }
 
     .lista-menu__item:hover{
-        background: var(--terciaria);
+        background: var(--cor-de-fundo);
     }
 
     .lista-menu__item:hover > .lista-menu__link{
