@@ -94,7 +94,7 @@
         <!-- <p class="banner__texto">Encontre sua próxima fragrância ou presenteie quem você ama!</p> -->
         <input type="search" class="banner__pesquisa" placeholder="Encontre sua próxima fragrância...">
     </section>
-    <div class="card">
+    <div class="card__promocao">
         <!-- 1ª linha -->
         <div class="card__descricao">
             <!-- 1ª coluna -->
@@ -107,24 +107,26 @@
             <!-- 2ª coluna-->
             <img src="img/produto2.webp" class="descricao__imagem" alt="Imagem do produto em promoção">
         </div>
-
-        <!-- 2ª linha -->
-        <div class="card__botoes"> 
-            <!-- 1ª Coluna-->
-            <ul class="botoes">
-                <li class="botoes__item"><img src="img/like.svg" alt="Botão like"></li>
-                <li class="botoes__item"><img src="img/bag.svg" alt="Botão minhas compras"></li>
-            </ul>
-            <!-- 2ª Coluna-->
-            <p class="botoes__preco__anterior">De R$49,99 por apenas</p>
-            <p class="botoes__ancora">R$34,90!</p> 
+        <div class="card__interacao-inferior">
+            <div class="card__promocao-botoes"> 
+                <!-- 1ª Coluna-->
+                <ul class="botoes">
+                    <li class="botoes__item"><img src="img/like.svg" alt="Botão like"></li>
+                    <li class="botoes__item"><img src="img/bag.svg" alt="Botão minhas compras"></li>
+                </ul>
+            </div>
+            <div class="card__promocao-descricao"> 
+                <!-- 2ª Coluna-->
+                <p class="botoes__preco__anterior">De <s>R$49,99</s> por apenas</p>
+                <p class="card__promocao-preco">R$34,90!</p> 
+            </div> 
         </div>
     </div>
     <section class="carrossel">
         <h2 class="carrossel__titulo">Destaques do Mês</h2>
         <!-- Slider main container -->
     <div class="carrossel__container">
-        <div class="swiper">
+        <div class="swiper" data-zoom="true">
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
             <!-- Additional required wrapper -->
@@ -172,7 +174,7 @@
         <h2 class="carrossel__titulo">CABELOS</h2>
         <!-- Slider main container -->
     <div class="carrossel__container">
-        <div class="swiper">
+        <div class="swiper" data-zoom="true">
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
             <!-- Additional required wrapper -->
@@ -193,7 +195,7 @@
         <h2 class="carrossel__titulo">PERFUMARIA</h2>
         <!-- Slider main container -->
     <div class="carrossel__container">
-        <div class="swiper">
+        <div class="swiper" data-zoom="true">
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
             <!-- Additional required wrapper -->
@@ -213,7 +215,7 @@
     </section>
 
 <section class="topicos">
-    <h2 class="topicos__titulo">CATEGORIAS POPULARES</h2>
+    <h2 class="topicos__titulo">Talvez você se interesse por:</h2>
     <ul class="topicos__lista">
         <li class="topicos__item"> 
             <a href="#" class="topicos__link">Perfumaria</a> 
@@ -254,6 +256,13 @@
             pagination: {
                 el: '.swiper-pagination',
                 type: 'bullets',
+            },
+            zoom: {
+                enabled: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
         });
     </script>
