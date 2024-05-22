@@ -4,7 +4,6 @@
 @import url("styles/topicos.css");
 @import url("styles/contato.css");
 @import url("styles/footer.css");
-@import url("styles/login.css");
 :root {
     --cor-de-fundo: #E9EB9E;
     --branco: #FFFFFF;
