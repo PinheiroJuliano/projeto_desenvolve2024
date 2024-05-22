@@ -15,6 +15,17 @@
     align-items: center;
     position: relative;
     text-decoration: none;
+    flex-direction: row;
+}
+
+.cabeçalho_wraper {
+    background-color: var(--terciaria);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    flex-direction: row;
 }
 
 .container {
