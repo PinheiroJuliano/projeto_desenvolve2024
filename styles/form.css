@@ -122,6 +122,27 @@
     font-family: var(--fonte-secundaria);
 }
 
+.hidden {
+    display: none;
+}
+
+
+/* Animação para aparecer */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-form {
+    animation: fadeIn 0.5s ease forwards;
+}
+
 @media screen and (max-width: 768px) {
     .card-wrapper {
         flex-direction: column;

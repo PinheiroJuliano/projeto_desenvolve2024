@@ -1,8 +1,13 @@
 const cardClickAnimate = document.querySelector(".card-wrapper");
+let formContainer = document.querySelector('.form__container');
 
 if (cardClickAnimate) {
     cardClickAnimate.addEventListener('click', () => {
         cardClickAnimate.classList.add('slide-bck-top');
+        if (formContainer) {
+            formContainer.classList.remove('hidden');
+            formContainer.classList.add('fade-in-form');
+        }
     });
 }
 
