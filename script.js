@@ -38,3 +38,30 @@ document.addEventListener("DOMContentLoaded",  () => {
         fadeTransition.classList.add("fade-in");
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const emailInput = document.getElementById('username');
+    const form = document.getElementById('loginForm');
+    const emailErrorLabel = document.getElementById('email-error');
+
+    form.setAttribute('novalidate', true);
+
+    form.addEventListener('submit', (event) => {
+        const email = emailInput.value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            event.preventDefault();
+            emailInput.classList.add("error");
+            emailErrorLabel.style.display = 'block';
+            emailInput.placeholder = '';
+            emailInput.value = '';
+        }
+    });
+
+    emailInput.addEventListener('focus', () => {
+        emailInput.classList.remove("error");
+        emailErrorLabel.style.display = 'none';
+        emailInput.placeholder = 'Usuário';
+    });
+});
