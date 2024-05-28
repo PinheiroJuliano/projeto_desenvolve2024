@@ -1,6 +1,7 @@
 const cardClickAnimate = document.querySelector(".card-wrapper");
 let formContainer = document.querySelector('.form__container');
 
+
 if (cardClickAnimate) {
     cardClickAnimate.addEventListener('click', () => {
         cardClickAnimate.classList.add('slide-bck-top');
@@ -32,19 +33,19 @@ window.addEventListener('load', () => {
     }
 });
 
-document.addEventListener("DOMContentLoaded",  () => {
-    let fadeTransition = document.querySelector(".card__titulo__texto");
-    if (fadeTransition.classList.contains("loaded")) {
-        fadeTransition.classList.add("fade-in");
-    }
-});
-
 document.addEventListener("DOMContentLoaded", () => {
     const emailInput = document.getElementById('username');
     const form = document.getElementById('loginForm');
     const emailErrorLabel = document.getElementById('email-error');
+    const minhaSacola = document.querySelector('.container__link.hidden');
 
+    // Garantindo que o formulário não valide automaticamente
     form.setAttribute('novalidate', true);
+
+    // Verificar se "Minha Sacola" deve estar visível ao carregar a página
+    if (localStorage.getItem('minhaSacolaVisivel') === 'true') {
+        minhaSacola.classList.remove('hidden');
+    }
 
     form.addEventListener('submit', (event) => {
         const email = emailInput.value;
@@ -56,6 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
             emailErrorLabel.style.display = 'block';
             emailInput.placeholder = '';
             emailInput.value = '';
+        } else {
+            // Armazenar estado de visibilidade da "Minha Sacola" no localStorage
+            localStorage.setItem('minhaSacolaVisivel', 'true');
         }
     });
 

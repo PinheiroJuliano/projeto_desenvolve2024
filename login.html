@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -25,73 +24,42 @@
                 </label>
                 <ul class="lista-menu">
                     <li class="lista-menu__titulo">Categorias</li>
-                    <li class="lista-menu__item">
-                        <a href="#" class="lista-menu__link">Perfumaria</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="#" class="lista-menu__link">Cabelos</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="#" class="lista-menu__link">Hidratação</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="#" class="lista-menu__link">Infantil</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="#" class="lista-menu__link">Barba</a>
-                    </li>
+                    <!-- Links do menu aqui -->
                 </ul>
                 <a href="index.html" class="link__logo">
                     <img src="img/logo.svg" alt="Logo da Loja" class="container__imagem">
                     <h1 class="container__titulo"><b class="container__titulo__negrito">Apple</b>Leaf</h1>
                 </a>
             </div>
-        <ul class="opcoes">
-            <input type="checkbox" id="opcoes-menu" class="opcoes__botao">
-            <label for="opcoes-menu" class="opcoes__rotulo">
-                <li class="opcoes__item"> Categorias</li>
-            </label>
-            <ul class="lista-menu">
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Perfumaria</a>
+            <ul class="opcoes">
+                <input type="checkbox" id="opcoes-menu" class="opcoes__botao">
+                <label for="opcoes-menu" class="opcoes__rotulo">
+                    <li class="opcoes__item"> Categorias</li>
+                </label>
+                <ul class="lista-menu">
+                    <!-- Links do menu aqui -->
+                </ul>
+                <li class="opcoes__item">
+                    <a href="#" class="opcoes__link">FAVORITOS</a>
                 </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Cabelos</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Hidratação</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Infantil</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Barba</a>
+                <li class="opcoes__item">
+                    <a href="#" class="opcoes__link">MINHA ESTANTE</a>
                 </li>
             </ul>
-
-            <li class="opcoes__item">
-                <a href="#" class="opcoes__link">FAVORITOS</a>
-            </li>
-            <li class="opcoes__item">
-                <a href="#" class="opcoes__link">MINHA ESTANTE</a>
-            </li>
-
-        </ul>
-
             <div class="container">
                 <a href="#"><img src="img/like.svg" alt="Meus favoritos" class="container__imagem container__imagem-transparente"></a>
-                <a href="#" class="container__link">
-                    <img src="./img/bag.svg" alt="Carrinhos de compras" class="container__imagem">
+                <a href="#" class="container__link hidden" id="minhaSacola">
+                    <img src="img/bag.svg" alt="Carrinhos de compras" class="container__imagem">
                     <p class="container__texto">Minha sacola</p>
                 </a>
-                <a href="login.html" class="container__link">
+                <a href="login.html" class="container__link" id="loginLink">
                     <img src="img/profile.svg" alt="Meu perfil" class="container__imagem">
-                    <p class="container__texto">Perfil</p>
+                    <p class="container__texto">Login</p>
                 </a>
             </div>
         </header>
-<hr />
-</div>
+        <hr />
+    </div>
     <div class="container__login">
         <div class="card-wrapper">
             <div class="card__central">
@@ -102,22 +70,19 @@
                 <h3 class="card__subtitulo"> Leaf</h3>
             </div>    
         </div>
-            <div class="form__container hidden">
-                <form  id="loginForm" class="card__form">
-                    <div class="input-field">
-                        <label id="email-error" class="error-message" for="username" style="display: none;">Digite um email válido</label>
-                        <input type="email" id="username" name="username" placeholder="Usuário" required>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" id="password" name="password" placeholder="Senha" required>
-                    </div>
-                    <button type="submit" class="submit-button">Entrar</button>
-                </form>                
-            </div>
+        <div class="form__container hidden">
+            <form id="loginForm" class="card__form">
+                <div class="input-field">
+                    <label id="email-error" class="error-message" for="username" style="display: none;">Digite um email válido</label>
+                    <input type="email" id="username" name="username" placeholder="Usuário" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password" name="password" placeholder="Senha" required>
+                </div>
+                <button type="submit" class="submit-button">Entrar</button>
+            </form>                
         </div>
     </div>
     <script src="script.js"></script>
-
 </body>
-
 </html>
