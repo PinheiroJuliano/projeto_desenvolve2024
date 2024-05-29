@@ -33,8 +33,14 @@ window.addEventListener('load', () => {
     }
 });
 
+                //Parte do form de login//
+// Definindo o login e a senha predefinidos
+const predefinedUsername = 'admin@admin.com';
+const predefinedPassword = 'senha123';
+
 document.addEventListener("DOMContentLoaded", () => {
     const emailInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
     const form = document.getElementById('loginForm');
     const emailErrorLabel = document.getElementById('email-error');
 
@@ -42,18 +48,37 @@ document.addEventListener("DOMContentLoaded", () => {
     form.setAttribute('novalidate', true);
 
     form.addEventListener('submit', (event) => {
-        const email = emailInput.value;
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const loginForm = document.getElementById('loginForm');
+        event.preventDefault(); // Impede o envio padrão do formulário
 
+        const email = emailInput.value;
+        const password = passwordInput.value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        let valid = true;
+
+        // Validação de email
         if (!emailPattern.test(email)) {
-            event.preventDefault();
             emailInput.classList.add("error");
             emailErrorLabel.style.display = 'block';
-            emailInput.placeholder = '';
-            emailInput.value = '';
+            // emailInput.value = '';
+            valid = false;
+        } else {
+            emailInput.classList.remove("error");
+            emailErrorLabel.style.display = 'none';
         }
 
+        // Validação de login e senha
+        if (email === predefinedUsername && password === predefinedPassword) {
+            if (valid) {
+                // Redirecionando para a página inicial
+                window.location.href = 'index.html';
+            }
+        } else {
+            if (valid) {
+                // Exibindo uma mensagem de erro se a validação de email passou mas o login/senha estão incorretos
+                alert('Login ou senha incorretos!');
+            }
+        }
     });
 
     emailInput.addEventListener('focus', () => {
