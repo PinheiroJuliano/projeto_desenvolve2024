@@ -37,19 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailInput = document.getElementById('username');
     const form = document.getElementById('loginForm');
     const emailErrorLabel = document.getElementById('email-error');
-    const minhaSacola = document.querySelector('.container__link.hidden');
 
     // Garantindo que o formulário não valide automaticamente
     form.setAttribute('novalidate', true);
 
-    // Verificar se "Minha Sacola" deve estar visível ao carregar a página
-    if (localStorage.getItem('minhaSacolaVisivel') === 'true') {
-        minhaSacola.classList.remove('hidden');
-    }
-
     form.addEventListener('submit', (event) => {
         const email = emailInput.value;
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const loginForm = document.getElementById('loginForm');
 
         if (!emailPattern.test(email)) {
             event.preventDefault();
@@ -57,10 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
             emailErrorLabel.style.display = 'block';
             emailInput.placeholder = '';
             emailInput.value = '';
-        } else {
-            // Armazenar estado de visibilidade da "Minha Sacola" no localStorage
-            localStorage.setItem('minhaSacolaVisivel', 'true');
         }
+
     });
 
     emailInput.addEventListener('focus', () => {
