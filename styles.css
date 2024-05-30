@@ -4,6 +4,8 @@
 @import url("styles/topicos.css");
 @import url("styles/contato.css");
 @import url("styles/footer.css");
+@import url("styles/form.css");
+
 :root {
     --cor-de-fundo: #E9EB9E;
     --branco: #FFFFFF;
@@ -14,6 +16,7 @@
     --fonte-secundaria: "Josefin Sans";
     --preto: #000000;
     --corextra: #d17a22;
+    --cor-sombra: #c1c482;
 }
 
 body {

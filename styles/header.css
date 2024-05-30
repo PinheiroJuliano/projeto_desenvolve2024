@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block;
+    text-decoration: none;
 }
 
 .cabeçalho {
@@ -13,16 +14,38 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    text-decoration: none;
+    flex-direction: row;
+}
+
+.cabeçalho_wraper {
+    background-color: var(--terciaria);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    flex-direction: row;
 }
 
 .container {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    justify-content: center;
 }
 
 .container__imagem {
     padding: 1em;
     transform: scale(1);
+    text-decoration: none;
+}
+
+.link__logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--preto);
 }
 
 .lista-menu {

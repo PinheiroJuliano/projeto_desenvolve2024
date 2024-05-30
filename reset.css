@@ -99,7 +99,9 @@ details,
 figcaption,
 figure,
 footer,
-header,
+header{
+    text-decoration: none;
+}
 hgroup,
 menu,
 nav,
