@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const passwordInput = document.getElementById('password');
     const form = document.getElementById('loginForm');
     const emailErrorLabel = document.getElementById('email-error');
+    
 
     // Garantindo que o formulário não valide automaticamente
     form.setAttribute('novalidate', true);
@@ -71,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (email === predefinedUsername && password === predefinedPassword) {
             if (valid) {
                 // Redirecionando para a página inicial
-                window.location.href = 'index.html';
+                window.location.href = 'profile.html';
             }
         } else {
             if (valid) {
