@@ -15,7 +15,7 @@ As funcionalidades implementadas com JavaScript estão na tela de login:
   - No lugar de "Login", aparece a foto de perfil do usuário.
   - É disponibilizado o botão **Meus Pedidos** para acompanhar a situação (a tela de pedidos será implementada posteriormente).
 
-Funcionalidades para implementação futura:
+# Funcionalidades para implementação futura:
 
 - Tela de cadastro de usuário;
 - Sistema de banco de dados e sessão para salvar as informações de login e senha, e validação de sessão ativa;
