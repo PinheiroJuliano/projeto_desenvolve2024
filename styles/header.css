@@ -52,7 +52,7 @@
     display: none;
     position: absolute;
     top: calc(100% + 0px);
-    width: 50vw;
+    width: 9em;
     max-height: 300px; 
     overflow-y: auto;
 }
@@ -168,6 +168,8 @@
     .opcoes__botao{
         display: none;
     }
+
+
 }
 
 @media screen and (min-width: 1728px){
