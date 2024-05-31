@@ -30,9 +30,9 @@
 
 .container {
     display: flex;
-    align-items: center;
+    align-items: right;
     text-decoration: none;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .container__imagem {
